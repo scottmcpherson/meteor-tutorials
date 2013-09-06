@@ -46,12 +46,9 @@
 				role = Roles.userIsInRole(Meteor.user(), ["admin"])
 				if !role
 					that.aReplace(false, "/")
-					# that.go Home 
+					 
 		if !adminPage or Meteor.userId()?
-			console.log "id: ", Meteor.user()
-			console.log "admin: ", adminPage
-			
-			
+					
 			@view = new viewClass(params)
 			@render()
 

@@ -30,7 +30,6 @@ _.extend ReactiveAce,
 		if top < 56
 			$(".new-post-container > .col-lg-4").css({marginTop: -top})
 			scrollAceHeight = ($(window).height() - 170) + top
-			console.log scrollAceHeight
 			$("#aceEditor").css({height: scrollAceHeight})
 		else if top > 56
 			$(".new-post-container > .col-lg-4").css({marginTop: -56})

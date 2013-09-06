@@ -5,7 +5,6 @@
 
 standard-app-packages
 preserve-inputs
-reactive-ace
 stylus
 coffeescript
 backbone
@@ -13,3 +12,4 @@ bootstrap-3
 accounts-ui-bootstrap-3
 accounts-password
 roles
+reactive-ace

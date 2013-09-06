@@ -8,7 +8,7 @@
 				App.router.aReplace(e)
 
 		@template = Meteor.render ()->
-			html = Template.home({tutorials: Tutorials.find()})
+			html = Template.home({tutorials: Tutorials.find({live: true})})
 			return html
 
 	render: ()->
