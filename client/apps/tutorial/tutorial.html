@@ -1,0 +1,19 @@
+<template name="showTutorial">
+	<div class="container main-container">
+		{{#with tutorial}}
+			{{#if videoUrl}}
+				<div class="video-wrapper">
+					<iframe width="560" height="315" src="{{ videoUrl }}" frameborder="0" allowfullscreen></iframe>
+				</div>
+			{{/if}}
+
+			<div class="content">
+				<h1>{{ title }}</h1>
+				{{{ tutBody }}}  
+				{{> addComment}} 
+			</div>
+
+		{{/with}}
+	</div>
+</template>
+

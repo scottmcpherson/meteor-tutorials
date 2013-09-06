@@ -1,0 +1,33 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "reactive-ace": {
+        "path": "../packages/meteor-reactive-ace"
+      },
+      "bootstrap-3": {},
+      "accounts-ui-bootstrap-3": {},
+      "roles": {}
+    },
+    "packages": {
+      "reactive-ace": {
+        "path": "../packages/meteor-reactive-ace"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v0.3.4",
+        "commit": "680c056e849d079a1b669247f347da2b443aad91"
+      },
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.2.2",
+        "commit": "570ffe3ba084bae10c53915e5b0074dae26cae4a"
+      },
+      "roles": {
+        "git": "https://github.com/alanning/meteor-roles.git",
+        "tag": "v1.0.6",
+        "commit": "f81cbf7c765a4ed7e16a580c288db6f10a90856b"
+      }
+    }
+  }
+}

@@ -1,0 +1,264 @@
+body, h1
+	font-family "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif
+h4
+	font-size 14px
+	line-height: 1.428571429;
+
+.navbar
+	background-color #217dc5 !important
+	background-image none
+	background-repeat no-repeat
+	filter none
+	min-height 56px
+	border none
+.navbar-inverse .navbar-brand 
+	color: #fff
+.navbar-inverse .navbar-nav > li > a, a.dropdown-toggle 
+	color: #D2D4D6
+	font-size 18px
+	line-height 28px
+a.dropdown-toggle
+	padding-top 15px !important
+.nav > li > a:hover, .nav > li > a:focus
+	background-color transparent !important
+	color #fff
+.navbar-nav > li > a, a.dropdown-toggle 
+	height 56px
+	display block
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+	background-color transparent
+	text-decoration none 
+	color #fff
+.navbar-nav > li.login
+	height: 56px
+	line-height: 60px
+	padding-left: 15px
+
+a.navbar-brand 
+	height 56px
+	font-size 24px
+	max-width 300px
+	line-height 28px
+
+.main-container 
+	padding-top: 40px
+.list-post-row .col-lg-3, .list-post-row .col-lg-12
+	padding-top 30px
+
+.list-post-row .col-lg-12 
+	img
+		float left
+		margin-right 20px
+	.thumbnail
+		min-height 0
+	h4
+		font-size 18px
+
+a.comments 
+	color: #0088cc
+.thumbnail
+	min-height 380px
+	padding 0
+	border none
+	border-radius none
+	.caption
+		padding 0
+	img 
+		max-width 100%
+	a
+		color: #333333
+		display block
+	h1
+		font-size 22px
+	p.synopsis 
+		font-size 16px
+		color #2f2f2f
+	p.info
+		font-size 16px
+		color #cecece
+
+.list-post-row > .col-lg-3 >a
+	display block
+.btn-group
+	padding-right 15px
+a.thumb:hover
+	text-decoration none
+
+.new-post-container 
+	position absolute
+	left 0
+	top 76px
+	width 100% !important
+	margin-top -20px
+	.setBg 
+		background-color #141414
+		padding 0
+	.col-lg-4
+		padding-left 0
+		position fixed
+		bottom 0
+		top 56px
+	.col-lg-8
+		margin-top 14px
+	.col-lg-3
+		max-width 263px
+		margin-top 200px
+
+pre[class*="language-"]
+	border-radius 0
+ul.util-nav
+	height 60px	
+	width 100%
+	background-color #141414
+	margin-bottom 0
+	.take-live
+		margin-right 10px
+	li
+		margin-top 14px
+		list-style none
+
+ul.post-nav
+	list-style none
+	background-color #232323
+	height 55px
+	padding-top 8px
+	margin-bottom 0
+	
+ul.post-nav li.post,
+ul.post-nav li.meta
+	display inline-block
+	color #9c9d9c
+	line-height 40px
+	width 60px
+	text-align center
+	cursor pointer
+	height 40px
+	margin-top 7px
+
+
+ul.post-nav li.active
+	color #fff
+	background-color #141414
+	border-radius 4px 4px 0 0
+form.main 
+	margin-bottom 0
+	input[type="text"], textarea
+		border-radius 0 0 4px 4px
+		border 1px solid #fff
+		border-top 0 
+form.main label
+	background-color #fff
+	margin-bottom 0
+	border-radius 4px 4px 0 0 
+	color #9d9d9d
+	padding 4px 6px
+
+.meta > .form-group > .col-lg-12
+	margin-top 30px
+
+
+#aceEditor 
+	width 100%
+
+.video-wrapper 
+	position relative
+	padding-bottom 56.25% /* 16:9 */
+	padding-top 25px
+	height 0
+	background-color #fff
+	-webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.5)
+	-moz-box-shadow: 0 4px 10px rgba(0,0,0,0.5)
+	box-shadow: 0 4px 10px rgba(0,0,0,0.5)
+
+.video-wrapper iframe 
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	padding 4px
+
+.content
+	background-color #fff
+	border 1px solid #ddd
+	border-radius 4px
+	box-shadow 0 1px 3px rgba(0, 0, 0, 0.055)
+	margin-top 60px
+	padding 20px
+	p 
+		font-size 16px
+		color #2f2f2f
+
+.icon-search
+	color green
+
+.jumbotron
+	background-color #fff
+	border: 1px solid #dddddd;
+	border-radius: 4px
+	-webkit-transition: all 0.2s ease-in-out
+	-moz-transition: all 0.2s ease-in-out
+	-o-transition: all 0.2s ease-in-out
+@media (min-width: 768px) { 
+	.thumbnail img {
+		width 100%
+	}
+}
+
+
+
+
+
+
+
+
+
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+	body { padding-top: 0; }
+	.row-fluid ul.thumbnails li.span3:nth-child(4n + 5)  {
+		margin-left: 2.7624309392265194%;
+	}
+	
+
+}
+	
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	ul.navbar-nav { float: left !important; }
+	body { padding-top: 0; }
+	
+}
+
+
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.thumbnail img {
+		width 100%
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

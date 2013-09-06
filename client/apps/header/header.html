@@ -1,0 +1,28 @@
+<template name="componentHeader">
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+
+   <div class="container">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex7-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+         <a href="/" class="navbar-brand">Meteor Tutorials</a>
+      </div>
+
+      
+      <div class="navbar-collapse navbar-ex7-collapse collapse" style="height: 1px;">
+         <ul class="nav navbar-nav pull-right">
+            <li><a href="/">Tutorials</a></li>
+            <li><a href="/other">Serries</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="login">{{loginButtons}}</li>
+            
+            
+         </ul>
+      </div>
+   </div>
+</nav>
+</template>
