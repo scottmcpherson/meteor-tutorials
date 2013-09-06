@@ -1,8 +1,8 @@
 {
   "packages": {
-  	 // "reactive-ace":{
-  	 // 	 "path":"/Users/scotty/Documents/packages/meteor-reactive-ace"
-  	 // },
+  	 "reactive-ace":{
+  	 	 "path":"/Users/scotty/Documents/packages/meteor-reactive-ace"
+  	 },
     "bootstrap-3": {},
     "accounts-ui-bootstrap-3": {},
     "roles": {}
