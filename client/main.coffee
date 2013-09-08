@@ -8,4 +8,5 @@ Meteor.startup ->
 	$ ->
 		App.router = new Router()
 		Backbone.history.start({pushState: true})
-		console.log "awesome added"
+		console.log "awesome removed"
+		console.log "other stuff added"
