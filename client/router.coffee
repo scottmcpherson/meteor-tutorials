@@ -14,13 +14,10 @@
 
 	page_header_sel: "#header"
 
-	isAdmin: false
-
 	initialize: ()->
 
 		@viewHeader = new ViewHeader()
 		$(@page_header_sel).replaceWith(@viewHeader.render().$el)
-		@isAdmin = Roles.userIsInRole(Meteor.user(), ["admin"])
 
 	home: () ->
 		@.go Home
@@ -41,6 +38,7 @@
 		if !viewClass?
 			viewClass = Home
 		that = @
+		
 		Deps.autorun () ->
 			if adminPage and !Meteor.userId()?
 				role = Roles.userIsInRole(Meteor.user(), ["admin"])
