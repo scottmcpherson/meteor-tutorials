@@ -9,3 +9,4 @@ Meteor.startup ->
 		App.router = new Router()
 		Backbone.history.start({pushState: true})
 		console.log "some new stuff"
+		console.log "and more new stuff"
