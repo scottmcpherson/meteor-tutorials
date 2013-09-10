@@ -108,12 +108,9 @@ Template.aceEditor.rendered = ->
 		Tutorials.update _id: tutId, 
 			$set: 
 				tutBody: editor.value
-	# console.log tutId
-	# data = Tutorials.findOne({_id: tutId})
-	# console.log data
-	# if data 
-	# 	setTutorialValues data
 
+Template.previewTutorial.rendered = ->
+	Prism.highlightAll()
 
 		
 

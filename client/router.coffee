@@ -2,7 +2,7 @@
 
 	routes:
 		"": "home"
-		"tutorials/:title": "tutorial"
+		"tutorials/:href": "tutorial"
 		"admin": "adminList"
 		"admin/:id/edit": "editTutorial"
 		"admin/add": "addTutorial"
@@ -14,26 +14,18 @@
 
 	page_header_sel: "#header"
 
-	_gaq: null
-
 	initialize: ()->
-
 		@viewHeader = new ViewHeader()
 		$(@page_header_sel).replaceWith(@viewHeader.render().$el)
 
-		# Setup Google Analytics (change UA-XXXXX-X to your own Google Analytics number!)
-		`this._gaq=[['_setAccount','UA-43914308-1'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src='//www.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));`
 
-		@bind 'all', @_trackPageview
+		@bind 'route', @_trackPageview
 
 	home: () ->
 		@.go Home
 
-	tutorial: (title)->
-		@.go Tutorial, false, title
+	tutorial: (href)->
+		@.go Tutorial, false, href
 
 	adminList: ()->
 		@.go AdminList, true
@@ -74,6 +66,8 @@
 
 			a.href = @getHref(e.target)
 			route = a.pathname + a.search
+			if route is "/"
+				Session.set "title", undefined
 			@navigate(route, {trigger: true})
 
 			window.scrollTo(0,0)
@@ -86,4 +80,7 @@
 
 	_trackPageview: ->
 		url = Backbone.history.getFragment()
-		@_gaq.push(['_trackPageview', "/#{url}"])
+    
+		#prepend slash
+		url = "/" + url  if not /^\//.test(url) and url isnt ""
+		_gaq.push ["_trackPageview", url]
