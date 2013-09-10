@@ -14,10 +14,20 @@
 
 	page_header_sel: "#header"
 
+	_gaq: null
+
 	initialize: ()->
 
 		@viewHeader = new ViewHeader()
 		$(@page_header_sel).replaceWith(@viewHeader.render().$el)
+
+		# Setup Google Analytics (change UA-XXXXX-X to your own Google Analytics number!)
+		`this._gaq=[['_setAccount','UA-43914308-1'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src='//www.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));`
+
+		@bind 'all', @_trackPageview
 
 	home: () ->
 		@.go Home
@@ -73,3 +83,7 @@
 			return elt.href 
 		else 
 			return @getHref(elt.parentElement)
+
+	_trackPageview: ->
+		url = Backbone.history.getFragment()
+		@_gaq.push(['_trackPageview', "/#{url}"])
