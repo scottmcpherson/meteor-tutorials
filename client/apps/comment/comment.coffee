@@ -1,4 +1,5 @@
-Template.addComment.rendered = ()->
+Template.disqus.rendered = ()->
+	console.log "from comment", @
 	$ ->
 		el = document.createElement("script")
 		el.src = "/disqus.js"

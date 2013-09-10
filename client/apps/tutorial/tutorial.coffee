@@ -8,7 +8,7 @@
 				App.router.aReplace(e)
 		
 
-		@template = Meteor.render (data) ->
+		@template = Meteor.render () ->
 			# Session.set "title", data.title	
 			data = Tutorials.findOne({url: href})	
 			html = Template.showTutorial({tutorial: data})
@@ -20,4 +20,7 @@
 		return this
 
 Template.showTutorial.rendered = ->
+	console.log "rendered"
+	if @data.tutorial
+		Session.set "title", @data.tutorial.title
 	Prism.highlightAll()
