@@ -9,6 +9,9 @@ Meteor.publish "allTutorials", ->
 	user = Meteor.users.findOne @userId
 	if Roles.userIsInRole(user, ["admin"])
 		Tutorials.find()
+	else
+		@ready()
+
 	
 
 

@@ -4,7 +4,8 @@
     "basePackages": {
       "bootstrap-3": {},
       "accounts-ui-bootstrap-3": {},
-      "roles": {}
+      "roles": {},
+      "phantomjs": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/alanning/meteor-roles.git",
         "tag": "v1.0.6",
         "commit": "f81cbf7c765a4ed7e16a580c288db6f10a90856b"
+      },
+      "phantomjs": {
+        "git": "https://github.com/gadicohen/meteor-phantomjs.git",
+        "tag": "v0.0.2",
+        "commit": "a72eb79af068dd5d5d617ac71a42bd74e0cb52a4"
       }
     }
   }
