@@ -1,5 +1,4 @@
 Template.disqus.rendered = ()->
-	console.log "from comment", @
 	if !window.DISQUS
 		$ ->
 			el = document.createElement("script")

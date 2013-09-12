@@ -20,7 +20,6 @@
 		return this
 
 Template.showTutorial.rendered = ->
-	console.log "rendered"
 	if @data.tutorial
 		Session.set "title", @data.tutorial.title
 	Prism.highlightAll()
