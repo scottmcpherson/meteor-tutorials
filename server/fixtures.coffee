@@ -1,25 +1,25 @@
-if Tutorials.find().count() == 0
+# if Tutorials.find().count() == 0
 	# now = new Date().getTime()
 	# synop = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida..."
 	
-	userOneRole = ["admin"]
+	# userOneRole = ["admin"]
 
-	userOne = Accounts.createUser
-		name: "Scott"
-		email: "scotty.fl27@gmail.com"
-		password: "Franco28!"
-		roles: userOneRole
-		profile:
-			name: "Scott"
-			layout: "list"
+	# userOne = Accounts.createUser
+	# 	name: "Scott"
+	# 	email: "scotty.fl27@gmail.com"
+	# 	password: "Franco28!"
+	# 	roles: userOneRole
+	# 	profile:
+	# 		name: "Scott"
+	# 		layout: "list"
 
-	Meteor.users.update _id: userOne,
-		$set: 
-			'emails.0.verified': true
+	# Meteor.users.update _id: userOne,
+	# 	$set: 
+	# 		'emails.0.verified': true
 
-	Roles.addUsersToRoles userOne, userOneRole
+	# Roles.addUsersToRoles userOne, userOneRole
 
-	scott = Meteor.users.findOne _id: userOne
+	# scott = Meteor.users.findOne _id: userOne
 	
 	# Tutorials.insert
 	# 	title:'A test object post.'
