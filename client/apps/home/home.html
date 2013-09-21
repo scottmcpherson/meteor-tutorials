@@ -1,9 +1,13 @@
 <template name="home">
 	<div class="container main-container">
 		<div class="row">
-			{{#each tutorials}}
-				{{>tutorial}}
-			{{/each}}
+			{{#if tutorials}}
+				{{#each tutorials}}
+					{{>tutorial}}
+				{{/each}}
+			{{else}}
+				<h1>Coming Soon!</h1>
+			{{/if}}
 		</div>
 	</div>
 </template>
